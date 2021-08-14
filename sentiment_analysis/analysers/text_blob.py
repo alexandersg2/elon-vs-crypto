@@ -11,8 +11,10 @@ from nltk.stem import (
 )
 from textblob import TextBlob
 
+from sentiment_analysis.analysers.base import SentimentAnalyser
 
-class TextBlobSentimentAnalyser:
+
+class TextBlobSentimentAnalyser(SentimentAnalyser):
     def __init__(self):
         self._init_nltk_data()
         self.stop_words = stopwords.words('english')
